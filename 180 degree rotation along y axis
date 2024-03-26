@@ -1,0 +1,7 @@
+import numpy as np
+image = Image.open("input_image.jpg")
+image_array = np.array(image)
+rotated_image_array = np.flip(image_array, axis=1)
+rotated_image = Image.fromarray(rotated_image_array)
+rotated_image.save("rotated_image.jpg")
+rotated_image.show()
